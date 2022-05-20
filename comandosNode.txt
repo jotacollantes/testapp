@@ -1,0 +1,53 @@
+#Descarga de NodeJS Package
+#https://nodejs.org/en/download/current/
+#https://create-react-app.dev/docs/getting-started/
+#Para Limpiar cache
+npx clear-npx-cache
+#Para Crear Aplicacion
+npx create-react-app cliente
+#entramos a la carpeta cliente
+cd cliente/
+#ejecutamos la Aplicacion
+npm start
+#Instalar el paquete React Router Dom
+npm install react-router-dom
+
+#para crear el server JS primero se crea el archivo server.js en la raiz al mismo #nivel de la caprpeta cliente por debajo de crud_mern_stack
+#Debemos de ubicarnos en la raiz de la aplicacion /crud_mern_stack
+#se crea un package.json para el server.js
+npm init
+#Luego instalamos express
+npm install express
+#para correr node se ejecuta el comando
+node server.js
+#para que node corra constantemen y detecte cambios instalamos lo siguiente.
+ npm install nodemon
+#De ahi en adelante ya no ejecuto node server.js sino el siguiente comando:
+npx nodemon server.js
+
+#Para instalar MONGODB
+brew tap mongodb/brew
+brew search mongodb-community
+install mongodb-community
+brew services list
+brew services start mongodb-community
+brew services list
+
+#para instalar el dirver de mondb para node
+#hay que parar el server con ctrl+c
+npm install mongoose
+
+#para instalar uniqid en el frontend
+#se debe de parar la ejecucion
+npm install uniqid
+
+#para instalar axios en el frontend
+#se debe de parar la ejecucion
+npm install axios
+
+#para instalar body-parse en el backend para poder capturar los valores ingresados #en el formulario y enviados al back end
+#se debe de parar la ejecucion del backend
+npm install body-parse
+
+#Para instalar sweet alert, primero se debe de detener el frontend
+npm install sweetalert2
