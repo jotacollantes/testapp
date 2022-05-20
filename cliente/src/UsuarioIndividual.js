@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import axios from 'axios'
-import Swal from 'sweetalert2'
+import Alerta from './Alerta'
 
 //Se recibe como parametro el usuario enviado desde el componente <ListaUsuarios />
 function UsuarioIndividual({usuario}) 
@@ -9,17 +9,7 @@ function UsuarioIndividual({usuario})
     
      //Para regresar al index
     const navegar=useNavigate()
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
+    
     
     //Funcion para borrar usuario
     function borrarusuario(idusuario){
@@ -27,16 +17,11 @@ function UsuarioIndividual({usuario})
         axios.post('/api/usuario/borrarusuario',{idusuario: idusuario})
         .then(res => {
             //console.log(res.data)
+            console.log('Entro por aqui en delee')
             //alert(res.data)
-            //Swal.fire('Titulo','The user was created')
-
+            Alerta('User deleted successfully' ) 
             //Se redirecciona a la misma pagina
-            Toast.fire({
-                icon: 'success',
-                title: 'User deleted successfully'
-              })
             navegar(0)
-            
         })
         .catch(err => {
             console.log(err)

@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2'
-function Alerta() 
+function Alerta(mensaje) 
 {
-   
+    console.log(mensaje)
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -13,10 +13,12 @@ function Alerta()
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
       })
-       return(
-      Toast.fire({
-        icon: 'success',
-        title: 'Signed in successfully'
-      }))
+       return(<div>
+         {Toast.fire({
+                icon: 'success',
+                title: mensaje
+              })}
+       </div>
+      )
 }
 export default Alerta

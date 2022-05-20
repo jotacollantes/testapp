@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import Swal from 'sweetalert2'
+import Alerta from './Alerta'
 function EditarUsuario() 
 {
     const params =useParams()
@@ -10,19 +10,6 @@ function EditarUsuario()
     const[email,setEmail]=useState('')
     const[telefono,setTelefono]=useState('')
     const navegar=useNavigate()
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-
-
 
     useEffect(()=>{
         
@@ -58,22 +45,12 @@ function EditarUsuario()
             //console.log(res.data)
             //alert(res.data)
             //Swal.fire('Titulo','The user was updated')
-            
-              
-            Toast.fire({
-                icon: 'success',
-                title: 'User updated successfully'
-              })
-
-
-
+            Alerta('User Upated successfully' ) 
             navegar('/')
-            
         })
         .then(err => {
             console.log(err)
         })
-
     }
 
     return(

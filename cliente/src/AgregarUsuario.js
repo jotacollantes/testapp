@@ -2,8 +2,7 @@ import React,{useState} from 'react'
 import uniqid from 'uniqid'
 import axios from 'axios'
 import { Link,useNavigate } from 'react-router-dom'
-import Swal from 'sweetalert2'
-// import Alerta from './Alerta'
+import Alerta from './Alerta'
 
 function AgregarUsuario() 
 {
@@ -15,17 +14,7 @@ function AgregarUsuario()
    
     const navegar=useNavigate()
 
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
+   
 
     function agregarUsuario()
     {
@@ -41,10 +30,8 @@ function AgregarUsuario()
         .then(res => {
             //alert(res.data)
             // Swal.fire('Titulo','The user was created')
-            Toast.fire({
-                icon: 'success',
-                title: 'User created successfully'
-              })
+            //console.log("por aqui entro");
+            Alerta('User created successfully' ) 
             navegar('/')
         })
         .then(err => {

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/crudmernstack');
+mongoose.connect('mongodb://127.0.0.1:27017/crudmernstack2');
 
 const objetodb =mongoose.connection
 

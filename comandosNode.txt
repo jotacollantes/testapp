@@ -51,3 +51,10 @@ npm install body-parse
 
 #Para instalar sweet alert, primero se debe de detener el frontend
 npm install sweetalert2
+
+Para Cargar los archivos al githb
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/jjcolllantes/testapp.git
+git push -u origin master
