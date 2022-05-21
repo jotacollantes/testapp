@@ -28,8 +28,12 @@ function UsuarioIndividual({usuario})
         })
     }
     return(
-    <div className='container'>
-        <div className='row'>
+     
+    
+
+
+    <div className='container' >
+        <div className='row' > 
             {/* <div className='col-sm-2 offset-3'> */}
 
             <div className='col-sm-2'>
@@ -69,7 +73,9 @@ function UsuarioIndividual({usuario})
 
         </div>
         <hr className='mt-4'></hr>
-</div>
+    </div>
+ 
+
     )
 }
 export default UsuarioIndividual

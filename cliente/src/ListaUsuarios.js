@@ -19,7 +19,7 @@ function ListaUsuarios()
     //Mapear lista de usuario en objeto usuario
     const listausuarios=datausuarios.map(usuario => {
         return(
-            <div>
+            <div key={usuario.idusuario}>
                 {/* enviamos el objeto usuario al parametro usuario del componente <UsuarioIndividual/> */}
                 <UsuarioIndividual usuario={usuario}/>
             </div>
