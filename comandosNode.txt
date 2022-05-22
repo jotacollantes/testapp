@@ -59,3 +59,10 @@ git commit -m "first commit"
 #Se añade una vez
 #git remote add origin https://github.com/jjcolllantes/testapp.git
 git push -u origin master
+#Para ver los commit realizados y viajar en el tiempo con checkout
+git log --oneline --decorate --all --graph
+* bf55e70 (HEAD -> master, origin/master) cambios en comandoNode.txt
+* d085105 solucion key item
+* 9fa7bf0 actualizacion
+* ce16307 first commit
+git checkout ce16307
