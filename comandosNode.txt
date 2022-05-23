@@ -90,3 +90,5 @@ git branch
 git branch developer
 #Para cambiarse de rama
 git checkout developer
+#Para subir los archivos a un branch especifico 
+git push --set-upstream origin developer
