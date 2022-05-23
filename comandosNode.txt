@@ -92,3 +92,7 @@ git branch developer
 git checkout developer
 #Para subir los archivos a un branch especifico 
 git push --set-upstream origin developer
+
+#Para traer los cambios hechos en la rama developer hay que ubicarse en la rama #master y luego ejecutar el comando merge
+git checkout master
+git merge developer
