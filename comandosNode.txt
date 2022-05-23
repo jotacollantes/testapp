@@ -54,6 +54,7 @@ npm install sweetalert2
 
 Para Cargar los archivos al githb
 git init
+
 git add .
 git commit -m "first commit"
 #Se añade una vez
@@ -66,3 +67,26 @@ git log --oneline --decorate --all --graph
 * 9fa7bf0 actualizacion
 * ce16307 first commit
 git checkout ce16307
+#Para retroceder en la linea del tiempo pero no eliminando los archivos modificados en los anteriores commit, con --hard si se eliminan
+git reset --mixed ce16307                 
+#para ver la actividad de todo lo realizados
+git reflog
+
+618bfb2 (HEAD, origin/master, master) HEAD@{0}: reset: moving to 618bfb2
+ce16307 HEAD@{1}: reset: moving to ce16307
+618bfb2 (HEAD, origin/master, master) HEAD@{2}: checkout: moving from ce16307fbb979bc158af4cd71d740e13bff87f22 to 618bfb2
+ce16307 HEAD@{3}: checkout: moving from master to ce16307
+618bfb2 (HEAD, origin/master, master) HEAD@{4}: commit: =comandos modificados
+bf55e70 HEAD@{5}: commit: cambios en comandoNode.txt
+d085105 HEAD@{6}: commit: solucion key item
+9fa7bf0 HEAD@{7}: commit: actualizacion
+ce16307 HEAD@{8}: commit (initial): first commit
+#Borra el commit especificado en el idcommit y crea un commit nuevo
+git revert {idcommit} 
+
+#Para ver ramas
+git branch
+#Para crear una rama
+git branch developer
+#Para cambiarse de rama
+git checkout developer
